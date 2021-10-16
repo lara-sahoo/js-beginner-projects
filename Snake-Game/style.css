@@ -1,0 +1,77 @@
+
+body
+{
+  background: url(image/snake-bg2.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#loader
+{
+    position: fixed;
+    z-index: 9999999;
+    /* left: 0px;
+    top: 0px; */
+    width: 100%;
+    height: 100%;
+    background: url('image/snake-loader.jpg') 50% 50%  no-repeat #88ac04;
+    background-size: contain;
+}
+
+.container1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 45px
+}
+.main-head{
+  color: #8bf116;
+  font-variant-caps: petite-caps;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+canvas {
+  width: 80vmin;
+  border: solid 6px #578a34;
+/*  border: 10px solid cornflowerblue;
+*/  box-shadow: 1px 5px 50px 10px #c1ec68;
+}
+
+.form-container{
+  /*width: 30%;*/
+  color: white;
+}
+.vanish{
+  display: none;
+}
+.show{
+  display: block;
+}
+.form-class{
+  padding-top: 30px;
+}
+
+.space-form{
+  padding-bottom: 30px;
+}
+
+.game__score{
+  font-size: 30px;
+  padding-top: 15%;
+}
+
+.points {
+  width: fit-content;
+  border: 10px solid #578A34;
+  border-radius: 10px;
+  padding: 50px;
+  background-color: #99CC33;
+}
+
+#message{
+  color: #ff8f05;
+  font-size: 40px;
+}
