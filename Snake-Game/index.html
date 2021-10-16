@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Snake Game</title>
+	<link rel="shortcut icon" href="image/icon.ico">
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<!-- Jquery -->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  <div id="loader"></div>
+	<div class="container1">
+		<canvas id= "draw-board" height="250" width="250"></canvas>
+		<div class="form-container">
+			<h1 class="main-head">
+				Snake Game
+			</h1>
+			<form id="formBoard" class="form-class">
+			  <div class="form-row">
+			    <div class="form-group col-md-8">
+			      <label for="difficultyIp">Select Difficulty level: </label>
+			      <select id="difficultyIp" class="form-control" name="level">
+			        <option value="easy" selected>Easy</option>
+			        <option value="medium">Medium</option>
+			        <option value="hard">Hard</option>
+			      </select>
+			      <output class="space-form"></output>
+			    </div>
+			  </div>
+			  <div class="form-row">
+			  <div class="form-group">
+			    <label for="height">Height of canvas</label>
+			    <input type="range" id="heightIp" class="form-range" value="250" min="50" max="400" step="10" id="height" oninput="this.nextElementSibling.value = this.value">
+				<output class="space-form">250</output>
+
+			  </div>
+			  </div>
+			  <div class="form-row">
+			  <div class="form-group">
+			    <label for="width">Width of canvas</label>
+			    <input type="range" id="widthIp" class="form-range" value="250" min="50" max="400" step="10" id="width" oninput="this.nextElementSibling.value = this.value">
+				<output class="space-form">250</output>
+			  </div>
+			  </div>
+			  <button type="submit" id="gameStartBtn" class="btn btn-primary">Start Game</button>
+			</form>
+
+			<div id="scoreBoard" class="game__score vanish">
+        <div id="message"></div>
+				<center>
+          <div class="points">
+				 <div id="scoring">
+				 	Score: 0
+				 </div>
+				 <div id="highScore">
+				 	High Score: 0
+				 </div>
+			  	<center>
+			  		<button id="playAgainBtn" class="btn btn-success vanish">Play Again</button>
+			  	</center>
+				</div>
+        </center>
+			</div>
+
+		</div>
+	</div>
+
+					
+		
+<script>
+  $(window).load(function () {
+      $("#loader").fadeOut(1500);
+  });
+</script>
+<script src="script.js"></script>
+  
+</body>
+</html>
